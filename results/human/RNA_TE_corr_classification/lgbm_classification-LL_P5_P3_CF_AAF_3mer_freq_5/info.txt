@@ -1,0 +1,8 @@
+TE_path: human_RNA_TE_corr.csv
+symbol_to_fold_path: human_class_balance_symbol_to_fold.tsv
+data_path: data_with_human_RNA_TE_corr.csv
+model_name: lgbm_classification
+bio_source: ['bio_source_buffering_category']
+features_to_extract: ['LL', 'P5', 'P3', 'CF', 'AAF', '3mer_freq_5']
+metrics: ['accuracy_score', 'f1_score', 'precision_score', 'recall_score', 'roc_auc_score']
+results_path: results/human/RNA_TE_corr_classification/lgbm_classification-LL_P5_P3_CF_AAF_3mer_freq_5_1_2_3_4_5_6_7_8

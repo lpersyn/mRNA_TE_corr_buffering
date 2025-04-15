@@ -47,6 +47,13 @@ class LGBM_TE_model:
             data[pred_name] = all_preds.mean(axis=1)
 
         bio_sources = list(self.models.keys())
+
+        # rename mean_te col to mean_te_true
+        if "mean_te" in bio_sources:
+            data.rename(columns={"mean_te": "mean_te_true"}, inplace=True)
+        if "bio_source_TE_RNA_cor_value_nond" in bio_sources:
+            data.rename(columns={"bio_source_TE_RNA_cor_value_nond": "bio_source_TE_RNA_cor_value_nond_true"}, inplace=True)
+
         cols = ["SYMBOL"]
         if "transcript_id" in data.columns:
             cols.append("transcript_id")

@@ -1,0 +1,8 @@
+TE_path: mouse_RNA_TE_corr.csv
+symbol_to_fold_path: mouse_symbol_to_fold.tsv
+data_path: data_with_mouse_RNA_TE_corr.csv
+model_name: lgbm
+bio_source: ['bio_source_TE_RNA_cor_value_nond']
+features_to_extract: ['LL', 'P5', 'P3', 'CF', 'AAF', '3mer_freq_5', 'Struct']
+metrics: ['r2_score', 'pearsonr', 'spearmanr', 'mean_squared_error']
+results_path: results/mouse/lgbm-LL_P5_P3_CF_AAF_3mer_freq_5_Struct_1_2_3_4_5
